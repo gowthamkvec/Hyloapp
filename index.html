@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYLOAPP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="logo">HYLOAPP</div>
+    <ul class="top-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#delivery">Delivery Info</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1>One Stop Solution for All Your Bulk Purchases</h1>
+      <p>We deliver quality products across India and the world, specializing in Gifts, Furniture, and Stationery.</p>
+      <a href="#categories" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categories">
+    <h2>Explore Our Categories</h2>
+    <div class="category-cards">
+      <div class="card" onclick="showProducts('gifts')">
+        <img src="images/gifts.jpg" alt="Gifts">
+        <h3>Gifts</h3>
+      </div>
+      <div class="card" onclick="showProducts('furniture')">
+        <img src="images/furniture.jpg" alt="Furniture">
+        <h3>Furniture</h3>
+      </div>
+      <div class="card" onclick="showProducts('stationery')">
+        <img src="images/stationery.jpg" alt="Stationery">
+        <h3>Stationery</h3>
+      </div>
+    </div>
+
+    <!-- Product Lists -->
+    <div class="product-list" id="gifts" style="display:none">
+      <h3>Gifts Products</h3>
+      <ul>
+        <li><img src="images/waterbottle.webp" alt="Water Bottle"> Water Bottles</li>
+        <li><img src="images/diary.webp" alt="Diary"> Diaries</li>
+        <li><img src="images/mug.webp" alt="Coffee Mug"> Coffee Mugs</li>
+      </ul>
+    </div>
+    <div class="product-list" id="furniture" style="display:none">
+      <h3>Furniture Products</h3>
+      <ul>
+        <li><img src="images/chairs.jpg" alt="Chair"> Chairs</li>
+        <li><img src="images/table.jpg" alt="Table"> Tables</li>
+      </ul>
+    </div>
+    <div class="product-list" id="stationery" style="display:none">
+      <h3>Stationery Products</h3>
+      <ul>
+        <li><img src="images/pens.jpg" alt="Pen"> Pens</li>
+        <li><img src="images/books.jpg" alt="Book"> Books</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Delivery Section -->
+  <section class="delivery-info" id="delivery">
+    <h2>Delivery Scope</h2>
+    <ul>
+      <li>🚚 Within 24 Hours: All Over Chennai</li>
+      <li>🚚 Within 48 Hours: Tamil Nadu</li>
+      <li>🚚 Within 72 Hours: Southern States</li>
+      <li>📦 7 Days: All Over India</li>
+      <li>🌍 Worldwide: Based on Mode, Logistic Partner & Customer</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <p>&copy; 2025 HYLOAPP | All rights reserved.</p>
+  <div class="contact-info">
+    📧 Email: hyloapp@gmail.com<br>
+    📞 Phone: +91 98765 43210
+  </div>
+</footer>
+
+
+  <script>
+    function showProducts(category) {
+      const lists = document.querySelectorAll('.product-list');
+      lists.forEach(list => list.style.display = 'none');
+      document.getElementById(category).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
